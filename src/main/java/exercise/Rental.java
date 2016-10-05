@@ -1,7 +1,9 @@
 package exercise;
 
 
-//The rental class represents a customer renting a movie.
+/**
+ * The rental class represents a customer renting a movie.
+ */
 
 class Rental extends DomainObject {
     private int daysRented;

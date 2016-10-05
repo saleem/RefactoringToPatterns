@@ -1,10 +1,12 @@
 package exercise;
 
-// The customer class represents the customer. So far all the classes have been dumb encapsulated data. Customer holds all the behavior for producing a statement in its statement() method.
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The customer class represents the customer. So far all the classes have been dumb encapsulated data.
+ * Customer holds all the behavior for producing a statement in its statement() method.
+ */
 class Customer extends DomainObject {
     private List<Rental> rentals = new ArrayList<Rental>();
 

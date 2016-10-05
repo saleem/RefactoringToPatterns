@@ -1,6 +1,8 @@
 package exercise;
 
-// Movie represents the notion of a film. A video store might have several tapes in stock of the same movie
+/**
+ * Movie represents the notion of a film. A video store might have several tapes in stock of the same movie
+ * */
 
 public class Movie extends DomainObject {
     public static final int  CHILDRENS = 2;
