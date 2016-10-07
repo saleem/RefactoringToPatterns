@@ -2,12 +2,9 @@ package singleton;
 
 public class Elvis {
 
-    private static Elvis theOne;
+    private static final Elvis theOne = new Elvis();
 
     public static Elvis instance() {
-        if (theOne == null) {
-            theOne = new Elvis();
-        }
         return theOne;
     }
 }

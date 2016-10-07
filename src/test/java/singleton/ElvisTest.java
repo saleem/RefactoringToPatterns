@@ -2,9 +2,7 @@ package singleton;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
+import static org.junit.Assert.*;
 
 
 public class ElvisTest {
@@ -15,7 +13,23 @@ public class ElvisTest {
         Elvis two = Elvis.instance();
         assertNotNull(one);
         assertNotNull(two);
-        assertSame(one, two);
         assertEquals(one, two);
+        assertSame(one, two);
+    }
+
+    @Test
+    public void doubleTrouble() throws Exception {
+        Elvis one = Elvis.class.getDeclaredConstructor().newInstance();
+        Elvis two = Elvis.class.getDeclaredConstructor().newInstance();
+        assertNotNull(one);
+        assertNotNull(two);
+        assertNotSame("Elvis can be impersonated", one, two);
+    }
+
+    @Test
+    public void itsDifferentNow() throws Exception {
+        Elvis one = Elvis.class.getDeclaredConstructor().newInstance();
+        Elvis two = Elvis.class.getDeclaredConstructor().newInstance();
+        assertNotEquals("Elvis impersonators are not the same as the real deal", one, two);
     }
 }
