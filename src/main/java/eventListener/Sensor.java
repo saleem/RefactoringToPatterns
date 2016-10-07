@@ -17,6 +17,11 @@ public class Sensor {
         SensorEvent temperatureEvent = new TemperatureEvent();
         listeners.forEach(listener -> listener.listen(temperatureEvent) );
     }
+
+
+    public void removeListener(SensorEventListener listener) {
+        listeners.remove(listener);
+    }
 }
 
 class TemperatureEvent implements SensorEvent {
