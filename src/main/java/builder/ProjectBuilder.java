@@ -8,7 +8,7 @@ public class ProjectBuilder {
 
     private String name;
     private String location;
-    private LocalDate begins;
+    private LocalDate begins = LocalDate.now();
     private LocalDate ends;
 
 

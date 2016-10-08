@@ -17,6 +17,12 @@ public class ProjectTest {
         assertThat(project.getName(), is("Acme Tech"));
     }
 
+    @Test
+    public void beginDateMustBeTodayWhenUnspecified() {
+        Project project = new ProjectBuilder().name("Acme Tech").build();
+        assertThat(project.getBeginDate(), is(LocalDate.now()));
+    }
+
 
     @Test
     public void createWithAllParameters() {
